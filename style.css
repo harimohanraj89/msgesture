@@ -1,0 +1,51 @@
+body {
+    overflow: hidden;
+    position: relative;
+}
+
+div #targetContainer {
+/*
+Set the width and height properties of the target container to fill the viewport.
+You can set these properties to 100%, but we use 100vw (viewport width) and 100vh (viewport height).
+See http://go.microsoft.com/fwlink/?LinkID=301480 for more detail on CSS units supported by Internet Explorer.
+*/
+    height: 100vw;
+    width: 100vh;
+    overflow: hidden;
+    position: absolute;
+}
+
+div #colorMixer {
+/*
+A manipulation-blocking element is defined as an element that explicitly
+blocks direct manipulation via declarative markup, and instead fires gesture
+events such as MSGestureStart, MSGestureChange, and MSGestureEnd.
+*/
+    touch-action: none;
+    -ms-transform-origin: 0px 0px;
+    position: absolute;
+    background-color: black;
+    border-color: white;
+    border-width: thick;
+    border-style: solid;
+}
+
+div #colorSelector {
+    position: relative;
+}
+
+div #eventLog {
+    -ms-overflow-style:scrollbar;
+}
+
+input.Red {
+    background-color: rgb(255,0,0);
+}
+
+input.Green {
+    background-color: rgb(0,255,0);
+}
+
+input.Blue {
+    background-color: rgb(0,0,255);
+}
